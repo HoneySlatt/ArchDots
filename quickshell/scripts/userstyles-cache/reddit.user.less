@@ -1,0 +1,168 @@
+/* ==UserStyle==
+@name Reddit Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/reddit
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/reddit
+@version 2026.03.09.1
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/reddit/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Areddit
+@description Soothing pastel theme for Reddit
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("reddit.com") {
+  :root:not(.theme-dark) .theme-rpl,
+  :root:not(.theme-dark).theme-rpl,
+  :root:not(.theme-dark) .theme-beta,
+  :root:not(.theme-dark).theme-beta,
+  .theme-light {
+    #catppuccin(@lightFlavor);
+  }
+
+  :root:not(.theme-light) .theme-rpl,
+  :root:not(.theme-light).theme-rpl,
+  :root:not(.theme-light) .theme-beta,
+  :root:not(.theme-light).theme-beta,
+  .theme-dark {
+    #catppuccin(@darkFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    --color-pizzaRed: @red !important;
+    --color-global-brand-orangered: @accent !important;
+    --color-global-focus: @surface1 !important;
+    --color-interactive-content-disabled: @subtext0 !important;
+    --color-interactive-background-disabled: fade(@surface2, 70%) !important;
+    --color-interactive-pressed: @surface2 !important;
+    --color-neutral-content: @text !important;
+    --color-neutral-content-disabled: @subtext0 !important;
+    --color-neutral-content-weak: @subtext0 !important;
+    --color-neutral-content-strong: @text !important;
+    --color-global-white: @crust !important;
+    --color-neutral-background: @base !important;
+    --color-neutral-background-selected: @surface0 !important;
+    --color-neutral-background-weak: @mantle !important;
+    --color-neutral-background-medium: @base !important;
+    --color-neutral-background-strong: @crust !important;
+    --color-neutral-background-hover: @surface0 !important;
+    --color-neutral-border: @surface0 !important;
+    --color-neutral-border-medium: @surface0 !important;
+    --color-neutral-border-weak: @surface0 !important;
+    --color-neutral-border-strong: @surface2 !important;
+    --color-primary: @accent !important;
+    --color-primary-hover: lighten(@accent, 10%) !important;
+    --color-primary-visited: @lavender !important;
+    --color-primary-background: @accent !important;
+    --color-primary-background-hover: darken(@accent, 5%) !important;
+    --color-primary-background-selected: darken(@accent, 5%) !important;
+    --color-primary-onBackground: @base !important;
+    --color-primary-onBackground-selected: @crust !important;
+    --color-secondary: @subtext0 !important;
+    --color-secondary-hover: @subtext1 !important;
+    --color-secondary-weak: @subtext0 !important;
+    --color-secondary-onBackground: @text !important;
+    --color-secondary-background: @mantle !important;
+    --color-secondary-background-hover: @surface1 !important;
+    --color-secondary-background-selected: @surface1 !important;
+    --color-secondary-plain: @subtext0 !important;
+    --color-secondary-plain-hover: @subtext1 !important;
+    --color-secondary-plain-weak: @subtext0 !important;
+    --color-danger-background: @red !important;
+    --color-danger-background-disabled: fade(@red, 20%) !important;
+    --color-danger-background-hover: fade(@red, 98%) !important;
+    --color-danger-onBackground: @text !important;
+    --color-danger-content: @red !important;
+    --color-danger-content-default: @crust;
+    --color-danger-content-hover: darken(@red, 2%) !important;
+    --color-success-content: @green !important;
+    --color-success-hover: darken(@green, 2%) !important;
+    --color-success-onBackground: @crust;
+    --color-success-background: @green !important;
+    --color-success-background-hover: darken(@green, 2%) !important;
+    --color-warning-content: @yellow !important;
+    --color-warning-content-hover: darken(@yellow, 2%) !important;
+    --color-warning-onBackground: @base !important;
+    --color-warning-background: @yellow !important;
+    --color-warning-background-hover: darken(@yellow, 2%) !important;
+    --color-upvote-content: @accent !important;
+    --color-upvote-disabled: @subtext0 !important;
+    --color-upvote-onBackground: @text !important;
+    --color-upvote-background: @base !important;
+    --color-upvote-background-hover: darken(@accent, 5%) !important;
+    --color-upvote-background-disabled: @base !important;
+    --color-downvote-content: @text !important;
+    --color-downvote-content-weak: @text !important;
+    --color-downvote-disabled: @subtext0 !important;
+    --color-downvote-onBackground: @text !important;
+    --color-downvote-background: @base !important;
+    --color-downvote-background-hover: darken(@blue, 5%) !important;
+    --color-downvote-background-disabled: @mantle !important;
+    --color-tone-1: @text !important;
+    --color-tone-2: @subtext0 !important;
+    --color-tone-3: @overlay2 !important;
+    --color-tone-4: @surface0 !important;
+    --color-tone-5: @surface1 !important;
+    --color-tone-6: @surface2 !important;
+    --color-tone-7: @base !important;
+    --color-avatar-gradient: @accent !important;
+    --color-transparent-background-hover: fade(@surface0, 30%) !important;
+    --color-opacity-50: fade(@base, 50%) !important;
+    --color-online: @accent !important;
+    --color-favorite: @accent !important;
+    --color-brand-background: @accent !important;
+    --color-brand-background-hover: darken(@accent, 5%) !important;
+    --color-brand-onBackground: @crust !important;
+    --color-global-orangered: @accent !important;
+    --color-action-upvote: @accent !important;
+    --color-action-downvote: @blue;
+    --color-banner-error-text: @base !important;
+
+    --shreddit-color-wordmark: @accent;
+    #reddit-logo {
+      circle[fill="#FF4500"] {
+        fill: @accent !important;
+      }
+      path[fill="#FFF"] {
+        fill: @crust !important;
+      }
+    }
+
+    /* Trending news carousel on https://www.reddit.com/r/popular/. */
+    shreddit-gallery-carousel {
+      // Headline
+      .text-primary-onBackground {
+        color: @text;
+      }
+
+      // r/... *and more*
+      .text-coolgray-350 {
+        color: @subtext1;
+      }
+    }
+
+    /* Community themes - post header/metadata background and text. */
+    #pdp-credit-bar {
+      --color-neutral-background: @base;
+      --color-neutral-content: @text;
+      --color-neutral-content-weak: @subtext0;
+      --color-primary-hover: lighten(@accent, 10%);
+    }
+
+    reddit-header-large reddit-search-large::before,
+    reddit-header-large reddit-search-large::after {
+      background:
+        linear-gradient(@base, @base) padding-box,
+        linear-gradient(90deg, @accent, @accent) border-box;
+    }
+  }
+}

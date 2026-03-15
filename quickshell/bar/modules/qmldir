@@ -1,0 +1,10 @@
+DistroIcon 1.0 DistroIcon.qml
+Workspaces 1.0 Workspaces.qml
+CpuUsage 1.0 CpuUsage.qml
+GpuUsage 1.0 GpuUsage.qml
+RamUsage 1.0 RamUsage.qml
+Clock 1.0 Clock.qml
+Volume 1.0 Volume.qml
+NetworkInfo 1.0 NetworkInfo.qml
+Notifications 1.0 Notifications.qml
+PowerButton 1.0 PowerButton.qml

@@ -1,0 +1,24 @@
+singleton Theme 1.0 Theme.qml
+singleton LauncherState 1.0 LauncherState.qml
+singleton PowerMenuState 1.0 PowerMenuState.qml
+singleton CpuState 1.0 CpuState.qml
+singleton RamState 1.0 RamState.qml
+singleton GpuState 1.0 GpuState.qml
+singleton VolumeState 1.0 VolumeState.qml
+singleton NetworkState 1.0 NetworkState.qml
+singleton NetworkPopupState 1.0 NetworkPopupState.qml
+singleton VolumePopupState 1.0 VolumePopupState.qml
+singleton SmallLauncherState 1.0 SmallLauncherState.qml
+singleton CalendarPopupState 1.0 CalendarPopupState.qml
+singleton WeatherState 1.0 WeatherState.qml
+singleton DistroState 1.0 DistroState.qml
+Bar 1.0 Bar.qml
+CalendarPopup 1.0 CalendarPopup.qml
+SmallLauncher 1.0 SmallLauncher.qml
+AppLauncher 1.0 AppLauncher.qml
+PowerMenu 1.0 PowerMenu.qml
+NetworkPopup 1.0 NetworkPopup.qml
+VolumePopup 1.0 VolumePopup.qml
+PowerMenuButton 1.0 PowerMenuButton.qml
+PowerLauncher 1.0 PowerLauncher.qml
+singleton PowerLauncherState 1.0 PowerLauncherState.qml
